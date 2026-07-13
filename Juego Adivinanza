@@ -5,19 +5,16 @@ numero_secreto = random.randint(1,100)
 
 cant_intentos = 0
 cant_max_intentos = 10
-
 numero_adivinado = False
 
-print("Bienvenido al juego de \"Adivina el número secreto\", en este juego deberás adivinar un número al azar entre el 1 y 99 en un máximo de 10 intentos" )
+print("\nBienvenido al juego de \"Adivina el número secreto\", en este juego deberás adivinar un número al azar entre el 1 y 99 en un máximo de 10 intentos" )
 
 while not numero_adivinado:
     if not cant_intentos < cant_max_intentos:
-        print("\n¡Game Over! No has podido adivinar el número secreto dentro de los 10 intentos")
+        print("\n¡Game Over! No has podido adivinar el número secreto dentro de los 10 intentos\n")
         break
 
-    entrada = input("Introduce un número del 1 al 99: ")
-    numero = int(entrada)
-    
+    numero = int(input("Introduce un número del 1 al 99: "))
     if numero == numero_secreto:
         print("\n¡Felicitaciones has adivinado el número secreto!")
         numero_adivinado = True
